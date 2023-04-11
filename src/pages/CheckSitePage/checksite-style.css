@@ -1,0 +1,67 @@
+.container {
+  width: 100%;
+}
+.checker {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 50px 0;
+  max-width: 300px;
+  margin: 0 auto;
+}
+.checker__form {
+  width: 100%;
+  margin: 0 0 10px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.checker__input {
+  width: 100%;
+  border-radius: 5px;
+  padding: 5px 0;
+  text-align: center;
+  border: 1px solid #b2d6e3;
+}
+.checker__input:focus {
+  border: 1px solid #0f5670;
+  outline: none;
+}
+.checker__error {
+  color: rgb(255, 0, 0);
+  margin: 5px 0;
+}
+.checker__loading {
+  gap: 10px;
+  display: flex;
+}
+.checker__status {
+  font-size: 14px;
+  padding: 0;
+  margin: 0 0 10px 0;
+}
+.checker__status_s {
+  font-size: 10px;
+  opacity: 0.3;
+}
+.check__button {
+  width: 100%;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  border-radius: 10px;
+  padding: 8px 16px;
+  background-color: #dbe9ee;
+  color: #000;
+  text-decoration: none;
+}
+.check__button:hover {
+  transition: all 0.2s ease;
+  background-color: #b9e1ef;
+}
+.checker__link {
+  font-size: 12px;
+  padding: 10px 0;
+  color: blue;
+}

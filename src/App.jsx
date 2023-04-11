@@ -22,7 +22,6 @@ function App() {
         <Route path="/" element={<Layout />}>
           <Route index element={user?.email ? <Home /> : <WelcomePage />} />
           <Route path="/testdatapage" element={<TestDataPage />} />
-          {/* <Route path="/login" element={<LoginPage />} /> */}
           <Route
             path="/login"
             element={user?.email ? <Navigate to="/" /> : <LoginPage />}

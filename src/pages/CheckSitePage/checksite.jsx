@@ -21,7 +21,11 @@ export const CheckSite = () => {
     if (inputValue.match(urlRegex)) {
       setWaitingResponse(true);
       axios
-        .post(`${API_URL}/check`, { url: inputValue })
+        .post(
+          `${API_URL}/check`,
+          { url: inputValue },
+          { withCredentials: true }
+        )
         .then((res) => {
           setWaitingResponse(false);
           const content = res.headers["content-type"];

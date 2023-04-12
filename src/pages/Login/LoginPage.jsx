@@ -1,14 +1,13 @@
 import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
 import { useFetch } from "../../hooks/hookFetch";
+import { API_URL } from "../../constants/constants";
 const google = window.google;
 
 // https://developers.google.com/identity/gsi/web/reference/js-reference
 
 export const LoginPage = () => {
-  const { handleGoogle, loading, error } = useFetch(
-    "http://localhost:5000/login"
-  );
+  const { handleGoogle, loading, error } = useFetch(`${API_URL}/login`);
 
   useEffect(() => {
     // /* global google */

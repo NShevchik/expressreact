@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import axios from "axios";
-import { urlRegex } from "../../constants/constants";
+import { API_URL, urlRegex } from "../../constants/constants";
 import download from "downloadjs";
 import "./checksite-style.css";
 import { FallingLines } from "react-loader-spinner";
@@ -21,7 +21,7 @@ export const CheckSite = () => {
     if (inputValue.match(urlRegex)) {
       setWaitingResponse(true);
       axios
-        .post("/check", { url: inputValue })
+        .post(`${API_URL}/check`, { url: inputValue })
         .then((res) => {
           setWaitingResponse(false);
           const content = res.headers["content-type"];
@@ -81,7 +81,7 @@ export const CheckSite = () => {
         <button
           className="check__button"
           onClick={() => {
-            axios.get("/pdf").then((res) => {
+            axios.get(`${API_URL}/pdf`).then((res) => {
               const content = res.headers["content-type"];
               download(res.data, "testfrompdf", content);
             });
